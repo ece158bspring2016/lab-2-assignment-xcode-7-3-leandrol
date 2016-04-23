@@ -10,7 +10,7 @@ import UIKit
 
 class PlayersViewController: UITableViewController {
     
-    var players:[Player] = playersData
+    var apartments:[Apartment] = apartmentData
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,20 +36,22 @@ class PlayersViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return players.count
+        return apartments.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("PlayerCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("ApartmentCell", forIndexPath: indexPath) as! ApartmentCell
 
         // Configure the cell...
-        let player = players[indexPath.row] as Player
-        cell.textLabel?.text = player.name
-        cell.detailTextLabel?.text = player.game
+        let apartment = apartments[indexPath.row] as Apartment
+        
+        cell.apartment = apartment
 
         return cell
     }
+    
+    
     
 
     /*

@@ -8,8 +8,11 @@
 
 import Foundation
 
-let playersData = [
-    Player(name:"Bill Evans", game:"Tic-Tac-Toe", rating: 4),
-    Player(name:"Oscar Peterson", game:"Spin the Bottle", rating: 5),
-    Player(name:"Dave Brubeck", game:"Texas Hold 'em Poker", rating: 2)
+let apartmentData = [
+    Apartment(name:"Costa Verde", location:"8720 Costa Verde Boulevard", rating: 3),
+    Apartment(name:"La Regencia", location: "7681 Palmilla Drive", rating: 2),
+    Apartment(name:"La Jolla Del Sol", location: "8046 Regents Road", rating: 4),
+    Apartment(name:"Regents Court Apartments", location: "8465 Regents Road", rating: 4),
+    Apartment(name:"Canyon Park Apartments", location: "9555 Genessee Avenue", rating: 1)
 ]
+

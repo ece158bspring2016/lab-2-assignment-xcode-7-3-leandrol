@@ -8,14 +8,14 @@
 
 import UIKit
 
-struct Player {
-    var name: String?
-    var game: String?
+struct Apartment {
+    var apartmentName: String?
+    var location: String?
     var rating: Int
     
-    init(name: String?, game: String?, rating: Int) {
-        self.name = name
-        self.game = game
+    init(name: String?, location: String?, rating: Int) {
+        self.apartmentName = name
+        self.location = location
         self.rating = rating
     }
 }
