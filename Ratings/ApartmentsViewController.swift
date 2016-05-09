@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlayersViewController: UITableViewController {
+class ApartmentsViewController: UITableViewController {
     
     var apartments:[Apartment] = apartmentData
 
@@ -49,6 +49,23 @@ class PlayersViewController: UITableViewController {
         cell.apartment = apartment
 
         return cell
+    }
+    
+    @IBAction func cancelToApartmentsViewController(segue:UIStoryboardSegue) {
+    }
+    
+    @IBAction func saveApartmentDetail(segue:UIStoryboardSegue) {
+        if let apartmentDetailsViewController = segue.sourceViewController as? ApartmentDetailsViewController {
+            
+            //add the new player to the players array
+            if let apt = apartmentDetailsViewController.apt {
+                apartments.append(apt)
+                
+                //update the tableView
+                let indexPath = NSIndexPath(forRow: apartments.count-1, inSection: 0)
+                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            }
+        }
     }
     
     
